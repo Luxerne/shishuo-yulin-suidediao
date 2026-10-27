@@ -14,13 +14,13 @@
     *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Serif SC","Songti SC",serif;line-height:1.7}a{color:inherit}button,input{font:inherit}
     .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
     .hero{padding:42px 0;display:block}.eyebrow{color:var(--rust);font:600 12px system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase}.hero h1{font-size:clamp(38px,7vw,76px);line-height:1.12;letter-spacing:.04em;margin:18px 0}.hero h1 span{display:block;font-size:.53em;color:var(--rust);margin-top:12px}.lead{font-size:18px;color:#5d594f;max-width:none;margin:0}.lead .story-line{display:block;white-space:nowrap;margin-top:8px}
-    .tv-stage{position:relative;width:min(100%,1120px);aspect-ratio:16/9;margin:10px auto 14px;background:#000;isolation:isolate}
+    .tv-stage{position:relative;width:min(100%,1120px);aspect-ratio:16/9;margin:10px auto 14px;background:#f7f7f7;isolation:isolate}.tv-stage:before{content:"";position:absolute;z-index:0;left:6.7%;top:13.55%;width:65.7%;height:65.7%;background:#000;border-radius:11%/13%}
     .tv-video{position:absolute;z-index:1;left:6.7%;top:13.55%;width:65.7%;height:65.7%;display:block;object-fit:contain;object-position:center;background:#090909;border-radius:11%/13%}
     .tv-video[hidden],.tv-prompt[hidden]{display:none}
     .tv-prompt{position:absolute;z-index:2;left:6.7%;top:13.55%;width:65.7%;height:65.7%;display:grid;place-items:center;border-radius:11%/13%;font-family:system-ui,sans-serif}.tv-prompt button{padding:10px 24px;background:#a34e32;color:#fff;border:0;cursor:pointer;font:600 16px system-ui,sans-serif}.tv-prompt button:disabled{opacity:.75;cursor:wait}
     .tv-frame{position:absolute;inset:0;z-index:3;width:100%;height:100%;object-fit:fill;mix-blend-mode:multiply;pointer-events:none}.tv-knob{position:absolute;z-index:4;left:89.6%;width:11.5%;aspect-ratio:1;border:0;border-radius:50%;background:transparent;transform:translate(-50%,-50%);cursor:ns-resize;touch-action:none;outline:none}.tv-knob:focus-visible{box-shadow:0 0 0 3px #a34e32,0 0 0 6px #fff}
     .tv-knob.brightness{top:21.2%}.tv-knob.volume{top:39%}
-    .section{padding:54px 0}.section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:20px}.section h2{font-size:29px;margin:0}.section-head p{margin:0;color:var(--muted);font-size:14px}.storyboard-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.storyboard-item{display:block;position:relative;aspect-ratio:16/9;overflow:hidden;background:#1c1a17}.storyboard-item img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s ease}.storyboard-item:hover img{transform:scale(1.035)}.searchbox{display:flex;gap:10px;margin:24px 0 14px}.searchbox input{width:100%;padding:15px 17px;border:1px solid #c9bead;background:var(--card);outline-color:var(--rust);border-radius:0}.searchbox button{padding:0 22px;background:var(--green);color:white;border:0;cursor:pointer}.result{font:13px system-ui,sans-serif;color:var(--muted);min-height:24px}.transcript{white-space:pre-wrap;background:var(--card);border:1px solid var(--line);padding:28px clamp(18px,4vw,46px);max-height:520px;overflow:auto;font-size:15px}.transcript mark{background:#f0d5a9;color:inherit;padding:0 2px}.themes{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.theme{background:var(--paper);padding:20px}.theme b{color:var(--rust);font-size:13px;letter-spacing:.08em}.theme p{margin:7px 0 0;color:#5d594f;font-size:14px}.footer{border-top:1px solid var(--line);padding:22px 0 38px;color:var(--muted);font:12px system-ui,sans-serif;display:flex;justify-content:space-between;gap:16px}
+    .section{padding:54px 0}.section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:20px}.section h2{font-size:29px;margin:0}.section-head p{margin:0;color:var(--muted);font-size:14px}.storyboard-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.storyboard-item{display:block;position:relative;aspect-ratio:16/9;overflow:hidden;background:#1c1a17}.storyboard-item img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s ease}.storyboard-item:hover img{transform:scale(1.035)}.storyboard-viewer{position:fixed;inset:0;width:100vw;height:100vh;max-width:none;max-height:none;margin:0;padding:68px 64px 24px;border:0;background:#090909;color:#fff}.storyboard-viewer::backdrop{background:#090909}.storyboard-viewer img{display:block;width:100%;height:100%;object-fit:contain}.viewer-button{position:absolute;display:grid;place-items:center;width:48px;height:48px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;cursor:pointer}.viewer-button:hover{background:rgba(255,255,255,.24)}.viewer-button:focus-visible{outline:2px solid #fff;outline-offset:3px}.viewer-button svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.viewer-back{top:12px;left:14px}.viewer-prev{top:50%;left:12px;transform:translateY(-50%)}.viewer-next{top:50%;right:12px;transform:translateY(-50%)}.searchbox{display:flex;gap:10px;margin:24px 0 14px}.searchbox input{width:100%;padding:15px 17px;border:1px solid #c9bead;background:var(--card);outline-color:var(--rust);border-radius:0}.searchbox button{padding:0 22px;background:var(--green);color:white;border:0;cursor:pointer}.result{font:13px system-ui,sans-serif;color:var(--muted);min-height:24px}.transcript{white-space:pre-wrap;background:var(--card);border:1px solid var(--line);padding:28px clamp(18px,4vw,46px);max-height:520px;overflow:auto;font-size:15px}.transcript mark{background:#f0d5a9;color:inherit;padding:0 2px}.themes{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.theme{background:var(--paper);padding:20px}.theme b{color:var(--rust);font-size:13px;letter-spacing:.08em}.theme p{margin:7px 0 0;color:#5d594f;font-size:14px}.footer{border-top:1px solid var(--line);padding:22px 0 38px;color:var(--muted);font:12px system-ui,sans-serif;display:flex;justify-content:space-between;gap:16px}
     @media(max-width:900px){.storyboard-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:720px){.hero{padding-top:30px}.lead .story-line{white-space:normal}.section-head{display:block}.themes{grid-template-columns:repeat(2,1fr)}.footer{flex-direction:column}}@media(max-width:520px){.storyboard-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}}
   </style>
 </head>
@@ -41,7 +41,7 @@
     <section class="section" aria-labelledby="search-title">
       <div class="section-head"><h2 id="search-title">在旁白里寻找</h2></div>
       <div class="searchbox"><input id="query" type="search" placeholder="输入关键词，例如：石狮、机器、匠人、传承" aria-label="搜索旁白关键词"><button id="search" type="button">搜索</button></div>
-      <div id="result" class="result" role="status" aria-live="polite">旁白全文载入中……</div>
+      <div id="result" class="result" role="status" aria-live="polite"></div>
       <article id="transcript" class="transcript" aria-label="影片旁白全文"></article>
     </section>
     <section class="section" aria-labelledby="themes-title">
@@ -56,75 +56,86 @@
     <section class="section" aria-labelledby="storyboard-title">
       <div class="section-head"><h2 id="storyboard-title">分镜查看</h2></div>
       <div class="storyboard-grid">
-        <a class="storyboard-item" href="storyboard/01.webp" target="_blank" rel="noopener"><img src="storyboard/01.webp" alt="第1号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/02.webp" target="_blank" rel="noopener"><img src="storyboard/02.webp" alt="第2号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/03.webp" target="_blank" rel="noopener"><img src="storyboard/03.webp" alt="第3号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/04.webp" target="_blank" rel="noopener"><img src="storyboard/04.webp" alt="第4号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/05.webp" target="_blank" rel="noopener"><img src="storyboard/05.webp" alt="第5号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/06.webp" target="_blank" rel="noopener"><img src="storyboard/06.webp" alt="第6号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/07.webp" target="_blank" rel="noopener"><img src="storyboard/07.webp" alt="第7号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/08.webp" target="_blank" rel="noopener"><img src="storyboard/08.webp" alt="第8号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/09.webp" target="_blank" rel="noopener"><img src="storyboard/09.webp" alt="第9号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/10.webp" target="_blank" rel="noopener"><img src="storyboard/10.webp" alt="第10号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/11.webp" target="_blank" rel="noopener"><img src="storyboard/11.webp" alt="第11号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/12.webp" target="_blank" rel="noopener"><img src="storyboard/12.webp" alt="第12号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/13.webp" target="_blank" rel="noopener"><img src="storyboard/13.webp" alt="第13号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/14.webp" target="_blank" rel="noopener"><img src="storyboard/14.webp" alt="第14号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/15.webp" target="_blank" rel="noopener"><img src="storyboard/15.webp" alt="第15号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/16.webp" target="_blank" rel="noopener"><img src="storyboard/16.webp" alt="第16号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/17.webp" target="_blank" rel="noopener"><img src="storyboard/17.webp" alt="第17号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/18.webp" target="_blank" rel="noopener"><img src="storyboard/18.webp" alt="第18号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/19.webp" target="_blank" rel="noopener"><img src="storyboard/19.webp" alt="第19号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/20.webp" target="_blank" rel="noopener"><img src="storyboard/20.webp" alt="第20号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/21.webp" target="_blank" rel="noopener"><img src="storyboard/21.webp" alt="第21号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/22.webp" target="_blank" rel="noopener"><img src="storyboard/22.webp" alt="第22号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/23.webp" target="_blank" rel="noopener"><img src="storyboard/23.webp" alt="第23号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/24.webp" target="_blank" rel="noopener"><img src="storyboard/24.webp" alt="第24号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/25.webp" target="_blank" rel="noopener"><img src="storyboard/25.webp" alt="第25号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/26.webp" target="_blank" rel="noopener"><img src="storyboard/26.webp" alt="第26号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/27.webp" target="_blank" rel="noopener"><img src="storyboard/27.webp" alt="第27号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/28.webp" target="_blank" rel="noopener"><img src="storyboard/28.webp" alt="第28号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/29.webp" target="_blank" rel="noopener"><img src="storyboard/29.webp" alt="第29号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/30.webp" target="_blank" rel="noopener"><img src="storyboard/30.webp" alt="第30号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/31.webp" target="_blank" rel="noopener"><img src="storyboard/31.webp" alt="第31号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/32.webp" target="_blank" rel="noopener"><img src="storyboard/32.webp" alt="第32号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/33.webp" target="_blank" rel="noopener"><img src="storyboard/33.webp" alt="第33号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/34.webp" target="_blank" rel="noopener"><img src="storyboard/34.webp" alt="第34号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/35.webp" target="_blank" rel="noopener"><img src="storyboard/35.webp" alt="第35号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/36.webp" target="_blank" rel="noopener"><img src="storyboard/36.webp" alt="第36号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/37.webp" target="_blank" rel="noopener"><img src="storyboard/37.webp" alt="第37号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/38.webp" target="_blank" rel="noopener"><img src="storyboard/38.webp" alt="第38号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/39.webp" target="_blank" rel="noopener"><img src="storyboard/39.webp" alt="第39号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/40.webp" target="_blank" rel="noopener"><img src="storyboard/40.webp" alt="第40号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/41.webp" target="_blank" rel="noopener"><img src="storyboard/41.webp" alt="第41号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/42.webp" target="_blank" rel="noopener"><img src="storyboard/42.webp" alt="第42号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/43.webp" target="_blank" rel="noopener"><img src="storyboard/43.webp" alt="第43号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/44.webp" target="_blank" rel="noopener"><img src="storyboard/44.webp" alt="第44号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/45.webp" target="_blank" rel="noopener"><img src="storyboard/45.webp" alt="第45号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/46.webp" target="_blank" rel="noopener"><img src="storyboard/46.webp" alt="第46号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/47.webp" target="_blank" rel="noopener"><img src="storyboard/47.webp" alt="第47号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/48.webp" target="_blank" rel="noopener"><img src="storyboard/48.webp" alt="第48号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/49.webp" target="_blank" rel="noopener"><img src="storyboard/49.webp" alt="第49号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/50.webp" target="_blank" rel="noopener"><img src="storyboard/50.webp" alt="第50号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/51.webp" target="_blank" rel="noopener"><img src="storyboard/51.webp" alt="第51号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/52.webp" target="_blank" rel="noopener"><img src="storyboard/52.webp" alt="第52号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/53.webp" target="_blank" rel="noopener"><img src="storyboard/53.webp" alt="第53号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/54.webp" target="_blank" rel="noopener"><img src="storyboard/54.webp" alt="第54号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/55.webp" target="_blank" rel="noopener"><img src="storyboard/55.webp" alt="第55号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/56.webp" target="_blank" rel="noopener"><img src="storyboard/56.webp" alt="第56号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/57.webp" target="_blank" rel="noopener"><img src="storyboard/57.webp" alt="第57号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/58.webp" target="_blank" rel="noopener"><img src="storyboard/58.webp" alt="第58号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/59.webp" target="_blank" rel="noopener"><img src="storyboard/59.webp" alt="第59号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/60.webp" target="_blank" rel="noopener"><img src="storyboard/60.webp" alt="第60号分镜图" loading="lazy" decoding="async"></a>
-        <a class="storyboard-item" href="storyboard/61.webp" target="_blank" rel="noopener"><img src="storyboard/61.webp" alt="第61号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/01.webp"><img src="storyboard/01.webp" alt="第1号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/02.webp"><img src="storyboard/02.webp" alt="第2号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/03.webp"><img src="storyboard/03.webp" alt="第3号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/04.webp"><img src="storyboard/04.webp" alt="第4号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/05.webp"><img src="storyboard/05.webp" alt="第5号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/06.webp"><img src="storyboard/06.webp" alt="第6号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/07.webp"><img src="storyboard/07.webp" alt="第7号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/08.webp"><img src="storyboard/08.webp" alt="第8号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/09.webp"><img src="storyboard/09.webp" alt="第9号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/10.webp"><img src="storyboard/10.webp" alt="第10号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/11.webp"><img src="storyboard/11.webp" alt="第11号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/12.webp"><img src="storyboard/12.webp" alt="第12号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/13.webp"><img src="storyboard/13.webp" alt="第13号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/14.webp"><img src="storyboard/14.webp" alt="第14号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/15.webp"><img src="storyboard/15.webp" alt="第15号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/16.webp"><img src="storyboard/16.webp" alt="第16号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/17.webp"><img src="storyboard/17.webp" alt="第17号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/18.webp"><img src="storyboard/18.webp" alt="第18号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/19.webp"><img src="storyboard/19.webp" alt="第19号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/20.webp"><img src="storyboard/20.webp" alt="第20号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/21.webp"><img src="storyboard/21.webp" alt="第21号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/22.webp"><img src="storyboard/22.webp" alt="第22号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/23.webp"><img src="storyboard/23.webp" alt="第23号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/24.webp"><img src="storyboard/24.webp" alt="第24号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/25.webp"><img src="storyboard/25.webp" alt="第25号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/26.webp"><img src="storyboard/26.webp" alt="第26号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/27.webp"><img src="storyboard/27.webp" alt="第27号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/28.webp"><img src="storyboard/28.webp" alt="第28号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/29.webp"><img src="storyboard/29.webp" alt="第29号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/30.webp"><img src="storyboard/30.webp" alt="第30号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/31.webp"><img src="storyboard/31.webp" alt="第31号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/32.webp"><img src="storyboard/32.webp" alt="第32号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/33.webp"><img src="storyboard/33.webp" alt="第33号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/34.webp"><img src="storyboard/34.webp" alt="第34号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/35.webp"><img src="storyboard/35.webp" alt="第35号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/36.webp"><img src="storyboard/36.webp" alt="第36号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/37.webp"><img src="storyboard/37.webp" alt="第37号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/38.webp"><img src="storyboard/38.webp" alt="第38号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/39.webp"><img src="storyboard/39.webp" alt="第39号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/40.webp"><img src="storyboard/40.webp" alt="第40号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/41.webp"><img src="storyboard/41.webp" alt="第41号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/42.webp"><img src="storyboard/42.webp" alt="第42号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/43.webp"><img src="storyboard/43.webp" alt="第43号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/44.webp"><img src="storyboard/44.webp" alt="第44号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/45.webp"><img src="storyboard/45.webp" alt="第45号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/46.webp"><img src="storyboard/46.webp" alt="第46号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/47.webp"><img src="storyboard/47.webp" alt="第47号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/48.webp"><img src="storyboard/48.webp" alt="第48号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/49.webp"><img src="storyboard/49.webp" alt="第49号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/50.webp"><img src="storyboard/50.webp" alt="第50号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/51.webp"><img src="storyboard/51.webp" alt="第51号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/52.webp"><img src="storyboard/52.webp" alt="第52号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/53.webp"><img src="storyboard/53.webp" alt="第53号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/54.webp"><img src="storyboard/54.webp" alt="第54号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/55.webp"><img src="storyboard/55.webp" alt="第55号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/56.webp"><img src="storyboard/56.webp" alt="第56号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/57.webp"><img src="storyboard/57.webp" alt="第57号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/58.webp"><img src="storyboard/58.webp" alt="第58号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/59.webp"><img src="storyboard/59.webp" alt="第59号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/60.webp"><img src="storyboard/60.webp" alt="第60号分镜图" loading="lazy" decoding="async"></a>
+        <a class="storyboard-item" href="storyboard/61.webp"><img src="storyboard/61.webp" alt="第61号分镜图" loading="lazy" decoding="async"></a>
       </div>
     </section>
   </main>
+  <dialog id="storyboard-viewer" class="storyboard-viewer" aria-label="分镜图片">
+    <button class="viewer-button viewer-back" type="button" aria-label="返回分镜列表" title="返回"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+    <button class="viewer-button viewer-prev" type="button" aria-label="上一张" title="上一张"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+    <img id="storyboard-view-image" alt="">
+    <button class="viewer-button viewer-next" type="button" aria-label="下一张" title="下一张"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+  </dialog>
   <script id="transcript-data" type="application/json">"第一场｜石头遇见机器\n说书先生旁白\n今儿不说那王侯将相，单说绥德这一块石头。老錾子传了两千多年，这一回，它遇上了一台新机器。\n第二场｜我以为，精确就是答案\n我打小就在这叮叮当当里长大。这声能从清早响到天擦黑。\n那会儿我还真以为，\n石雕就是这样的。\n一锤一錾，切磋琢磨\n石头就慢慢变成了狮子的模样。\n可是后来，机器进了工坊。\n落刀的角度能被计算纹样能被复刻，连下一刀的深度与力度，\n都能提前写进程序。我甚至相信——只要数据足够准确，机器不仅能够雕出石狮的形，也能把它的神，一并给雕出来。\n第三场｜一百尊石狮，一个模样\n过去几天才能完成的工作，现在只需更短的时间。\n快了，准了，也齐整了。\n那会儿我觉着，\n这就是石雕的新路子嘛。\n可真等我站到那一排石狮跟前，\n心里反倒有点不是滋味。\n一百尊，分毫不差，\n我看来看去，\n总觉得少了些什么。少了些什么呢？\n我想去寻找这个答案。\n第四场｜下刀之前，先看石头\n阿川旁白\n爷爷跟石头打了几十年交道。\n他啥也没说，\n只挑了块石头，搬到亮处。先看看它长成啥样，\n再顺着纹路又摸一遍；\n敲两下，听听声儿，\n心里才晓得，这一刀该往哪儿落。那是我从小见过无数次，却从未真正看懂的工序——相石。\n数据知道石头有多高、多宽、多硬，却不知道它经历过怎样的挤压，也不知道哪一道纹理下面，藏着它最容易碎裂的地方。\n原来我从来没有真正读懂石头。而匠人们，\n就是让每一块石头\n找到自己的模样。\n那天，我对着那块石头看了很久。\n它是一个个鲜活的生命。\n它是花鸟，是鱼虫，是万物\n它的魂，需要匠人的手，亲自点亮。\n第五场｜重新写一条刀路\n我把原来的刀路全翻出来，重新改。\n一个模子套不住所有的石头。\n石头的纹往哪儿走，构图就顺着往哪儿长。\n机器先把形塑出来，\n眉眼的轻重、鬃毛的转折、嘴角那点神气，\n还得留给人的手。\n第六场｜石头走出了工坊\n从此以后，石雕有了更多新可能。\n一尊尊新的石狮摆上展台，\n它们还留着阔嘴、宽鼻、卷鬃，\n但是，它们有了各自不同的神态。\n有人把它带回家，\n有人把它摆上书桌。\n石桌凳、石栏、石亭，\n它们从工坊出发，走向越来越远的地方。\n石雕不再只是一个人的手艺。\n从构图、生产，\n到安装、销售，\n一块石头背后，\n开始站着越来越多的人。\n工坊里，也添了越来越多年轻的面孔。\n他们第一次摸到石头，\n第一次握住锤錾，\n也第一次听见——\n一门老手艺，在今天继续发出的声音。\n第七场｜让石魂走进新的时代\n阿川旁白\n从汉画像石里的生活，\n到炕头石狮里祈愿，\n从门楼、桥梁和牌坊上的文化记忆\n到今天机器与手工共同雕出的新模样\n绥德石雕在每个时代\n焕发新生\n第八场｜新刻未完\n阿川旁白\n真正的传承，\n像黄河——\n带着自己的源头，\n穿过一次次转折，\n始终向前。\n石魂也是这样。\n从一双手，\n到另一双手；\n从一个时代，\n走向下一个时代。\n生生不息。\n说书先生旁白\n机器塑形，手工赋神。石头还是咱绥德的石头。\n绥德又刻下了一段新书。"</script>
   <script>
-    const box=document.querySelector('#transcript'),input=document.querySelector('#query'),status=document.querySelector('#result'),full=JSON.parse(document.querySelector('#transcript-data').textContent);box.textContent=full;status.textContent=`旁白全文已载入 · ${full.trim().length.toLocaleString()} 字`;
+    const box=document.querySelector('#transcript'),input=document.querySelector('#query'),status=document.querySelector('#result'),full=JSON.parse(document.querySelector('#transcript-data').textContent);box.textContent=full;
     function search(){const q=input.value.trim();if(!q){box.textContent=full;status.textContent=`显示旁白全文 · ${full.trim().length.toLocaleString()} 字`;return}if(!full){status.textContent='旁白仍在载入，请稍候。';return}const chunks=full.split(/(?=第[一二三四五六七八九十]+场)/);const matches=chunks.filter(s=>s.toLowerCase().includes(q.toLowerCase()));box.replaceChildren();for(const part of matches){const p=document.createElement('p');p.textContent=part.trim();const re=new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'gi');p.innerHTML=p.textContent.replace(re,m=>`<mark>${m}</mark>`);box.append(p)}status.textContent=matches.length?`找到 ${matches.length} 段相关旁白`:`没有找到“${q}”，试试“石狮”或“匠人”`}
     document.querySelector('#search').addEventListener('click',search);input.addEventListener('keydown',e=>{if(e.key==='Enter')search()});input.addEventListener('search',()=>{if(!input.value)search()});
+    const galleryLinks=[...document.querySelectorAll('.storyboard-item')],viewer=document.querySelector('#storyboard-viewer'),viewerImage=document.querySelector('#storyboard-view-image');let storyboardIndex=0;
+    function showStoryboard(index){storyboardIndex=(index+galleryLinks.length)%galleryLinks.length;const link=galleryLinks[storyboardIndex];viewerImage.src=link.href;viewerImage.alt=link.querySelector('img').alt;if(!viewer.open)viewer.showModal()}
+    galleryLinks.forEach((link,index)=>link.addEventListener('click',event=>{event.preventDefault();showStoryboard(index)}));
+    document.querySelector('.viewer-back').addEventListener('click',()=>viewer.close());document.querySelector('.viewer-prev').addEventListener('click',()=>showStoryboard(storyboardIndex-1));document.querySelector('.viewer-next').addEventListener('click',()=>showStoryboard(storyboardIndex+1));
+    viewer.addEventListener('click',event=>{if(event.target===viewer)viewer.close()});document.addEventListener('keydown',event=>{if(!viewer.open)return;if(event.key==='ArrowLeft')showStoryboard(storyboardIndex-1);if(event.key==='ArrowRight')showStoryboard(storyboardIndex+1)});
     const video=document.querySelector('#film'),playButton=document.querySelector('#play-film');let brightness=1,volume=1;
     function applyControls(){video.style.filter=`brightness(${brightness})`;video.volume=volume;document.querySelector('.tv-knob.brightness').setAttribute('aria-valuenow',Math.round(brightness*100));document.querySelector('.tv-knob.brightness').setAttribute('aria-valuetext',`亮度 ${Math.round(brightness*100)}%`);document.querySelector('.tv-knob.volume').setAttribute('aria-valuenow',Math.round(volume*100));document.querySelector('.tv-knob.volume').setAttribute('aria-valuetext',`音量 ${Math.round(volume*100)}%`)}
     function setKnob(knob,value){if(knob.classList.contains('brightness'))brightness=Math.max(.5,Math.min(1.5,value));else volume=Math.max(0,Math.min(1,value));applyControls()}
