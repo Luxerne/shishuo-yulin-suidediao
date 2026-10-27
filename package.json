@@ -1,0 +1,8 @@
+{
+  "name": "shishuo-yulin-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/materialize-video.mjs"
+  }
+}
