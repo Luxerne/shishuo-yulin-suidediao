@@ -28,11 +28,10 @@
       <video id="film" controls preload="none" playsinline aria-label="石说榆林——绥德石雕的岁月新刻决赛视频" hidden></video>
       <div id="film-prompt" style="min-height:220px;display:grid;place-content:center;text-align:center;color:#e6dfd3;padding:24px">
         <strong style="font-size:20px">作品视频播放</strong>
-        <label for="film-file" style="margin-top:12px;cursor:pointer;text-decoration:underline">选择本地决赛视频开始播放</label>
-        <input id="film-file" type="file" accept="video/mp4,video/*" style="margin:12px auto;color:#e6dfd3;max-width:100%">
-        <small style="color:#aaa397">在线页面可直接检索完整旁白；视频文件由参赛团队本地选择播放。</small>
+        <button id="play-film" type="button" style="margin:16px auto 8px;padding:10px 20px;background:#a34e32;color:#fff;border:0;cursor:pointer">播放决赛视频</button>
+        <small id="film-status" role="status" aria-live="polite" style="color:#c9c3b8">视频加载后即可在线播放</small>
       </div>
-      <div class="player-note"><span>《石说榆林——绥德石雕的岁月新刻》</span><span>决赛视频 · 本地播放</span></div>
+      <div class="player-note"><span>《石说榆林——绥德石雕的岁月新刻》</span><span>决赛视频 · 在线播放</span></div>
     </section>
     <section class="section" aria-labelledby="search-title">
       <div class="section-head"><h2 id="search-title">在旁白里寻找</h2><p>搜索石雕、石狮、机器、匠人等关键词</p></div>
@@ -55,7 +54,7 @@
     const box=document.querySelector('#transcript'),input=document.querySelector('#query'),status=document.querySelector('#result'),full=JSON.parse(document.querySelector('#transcript-data').textContent);box.textContent=full;status.textContent=`旁白全文已载入 · ${full.trim().length.toLocaleString()} 字`;
     function search(){const q=input.value.trim();if(!q){box.textContent=full;status.textContent=`显示旁白全文 · ${full.trim().length.toLocaleString()} 字`;return}if(!full){status.textContent='旁白仍在载入，请稍候。';return}const chunks=full.split(/(?=第[一二三四五六七八九十]+场)/);const matches=chunks.filter(s=>s.toLowerCase().includes(q.toLowerCase()));box.replaceChildren();for(const part of matches){const p=document.createElement('p');p.textContent=part.trim();const re=new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'gi');p.innerHTML=p.textContent.replace(re,m=>`<mark>${m}</mark>`);box.append(p)}status.textContent=matches.length?`找到 ${matches.length} 段相关旁白`:`没有找到“${q}”，试试“石狮”或“匠人”`}
     document.querySelector('#search').addEventListener('click',search);input.addEventListener('keydown',e=>{if(e.key==='Enter')search()});input.addEventListener('search',()=>{if(!input.value)search()});
-    document.querySelector('#film-file').addEventListener('change',e=>{const file=e.target.files[0];if(!file)return;const video=document.querySelector('#film');video.src=URL.createObjectURL(file);video.hidden=false;document.querySelector('#film-prompt').hidden=true;video.play().catch(()=>{});});
+    document.querySelector('#play-film').addEventListener('click',async()=>{const button=document.querySelector('#play-film'),note=document.querySelector('#film-status'),video=document.querySelector('#film');button.disabled=true;note.textContent='正在加载决赛视频，请稍候……';try{const manifest=await fetch('media/manifest.json').then(r=>{if(!r.ok)throw Error('无法读取视频清单');return r.json()}),parts=[];for(let i=0;i<manifest.chunks.length;i++){const response=await fetch(manifest.chunks[i]);if(!response.ok)throw Error('视频文件加载失败');parts.push(await response.arrayBuffer());note.textContent=`正在加载视频 ${i+1}/${manifest.chunks.length} · ${Math.round((i+1)/manifest.chunks.length*100)}%`}const url=URL.createObjectURL(new Blob(parts,{type:'video/mp4'}));video.src=url;video.hidden=false;document.querySelector('#film-prompt').hidden=true;await video.play()}catch(error){note.textContent=`视频加载失败：${error.message}，请刷新页面后重试。`;button.disabled=false}});
   </script>
 </body>
 </html>
